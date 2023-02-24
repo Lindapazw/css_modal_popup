@@ -17,4 +17,72 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #d90c43;
+    display: block;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.container-all {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.container-all:target {
+    background: rgba(0,0,0,.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    background-color: #fff;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+}
+
+.img {
+    width: 40%;
+    background-image: url(img/1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-text {
+    width: 60%;
+    padding: 50px;
+    overflow-y: auto; /* si tenemos texto de más, aparece el scroll */
+}
+
+.container-text h1 {
+    font-size: 30px;
+}
+
+.container-text p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.btn-close-popup {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 19px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 20px;
 }
